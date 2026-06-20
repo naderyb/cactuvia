@@ -89,11 +89,8 @@
   border-bottom: 1px solid var(--linen);
 }
 @media (max-width: 700px) {
-  .step {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 40px 0;
-  }
+  .story { padding: 40px var(--gutter) 100px; }
+  .step { gap: 12px; }
 }
 
 .stepIndex {
