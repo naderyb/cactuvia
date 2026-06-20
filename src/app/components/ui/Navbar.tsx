@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
+import Image from "next/image";
 
 const navLinks = [
   { label: "BOUTIQUE", href: "#boutique" },
@@ -27,25 +28,55 @@ export default function Navbar() {
       <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
         <div className={styles.inner}>
           <a href="#hero" className={styles.logo}>
-            <span className={styles.logoName}>CACTUVIA</span>
-            <span className={styles.logoSub}>SOINS NATURELS</span>
+            <Image
+              src="/logo.png"
+              alt="Cactuvia"
+              width={180}
+              height={108}
+              priority
+              className={`${styles.logoImg} ${styles.logoDefault}`}
+            />
+            <Image
+              src="/logo2.png"
+              alt="Cactuvia"
+              width={180}
+              height={108}
+              priority
+              className={`${styles.logoImg} ${styles.logoScrolled}`}
+            />
           </a>
 
           <div className={styles.links}>
             {navLinks.map((l) => (
-              <a key={l.label} href={l.href} className={styles.link}>{l.label}</a>
+              <a key={l.label} href={l.href} className={styles.link}>
+                {l.label}
+              </a>
             ))}
           </div>
 
           <div className={styles.icons}>
             <button className={styles.iconBtn} aria-label="Recherche">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.2"
+              >
                 <circle cx="11" cy="11" r="7" />
                 <path d="M21 21l-4.35-4.35" strokeLinecap="round" />
               </svg>
             </button>
             <button className={styles.iconBtn} aria-label="Panier">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.2"
+              >
                 <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
                 <line x1="3" y1="6" x2="21" y2="6" />
                 <path d="M16 10a4 4 0 01-8 0" />
@@ -59,14 +90,21 @@ export default function Navbar() {
             onClick={() => setMenuOpen((v) => !v)}
             aria-label="Menu"
           >
-            <span /><span /><span />
+            <span />
+            <span />
+            <span />
           </button>
         </div>
       </nav>
 
       <div className={`${styles.mobileMenu} ${menuOpen ? styles.open : ""}`}>
         {navLinks.map((l) => (
-          <a key={l.label} href={l.href} className={styles.mobileLink} onClick={() => setMenuOpen(false)}>
+          <a
+            key={l.label}
+            href={l.href}
+            className={styles.mobileLink}
+            onClick={() => setMenuOpen(false)}
+          >
             {l.label}
           </a>
         ))}
