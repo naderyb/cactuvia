@@ -1,0 +1,27 @@
+.footer { background: var(--terre-deep); }
+.main { max-width: var(--container); margin: 0 auto; padding: 96px var(--gutter); }
+.grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 64px; }
+@media (max-width: 860px) { .grid { grid-template-columns: 1fr 1fr; gap: 40px; } }
+@media (max-width: 520px) { .grid { grid-template-columns: 1fr; } }
+
+.brandName { font-family: var(--font-serif); font-weight: 400; font-size: 24px; letter-spacing: 6px; color: var(--cream); display: block; }
+.brandSub { font-size: 9px; letter-spacing: 4px; color: var(--stone-light); font-weight: 300; margin-top: 4px; display: block; }
+.brandText { font-size: 12px; line-height: 1.95; color: rgba(251,249,245,.4); font-weight: 300; max-width: 280px; margin: 32px 0; }
+.socials { display: flex; gap: 20px; }
+.social { font-size: 8px; letter-spacing: 2px; color: rgba(251,249,245,.35); font-weight: 300; transition: color .3s; }
+.social:hover { color: #fff; }
+
+.colTitle { font-size: 9px; letter-spacing: 3px; color: var(--gold); font-weight: 500; margin-bottom: 32px; }
+.colList { display: flex; flex-direction: column; gap: 16px; }
+.colLink { font-size: 12px; color: rgba(251,249,245,.4); font-weight: 300; transition: color .3s; }
+.colLink:hover { color: #fff; }
+
+.bottom { border-top: 1px solid rgba(255,255,255,.06); }
+.bottomInner {
+  max-width: var(--container); margin: 0 auto; padding: 24px var(--gutter);
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+}
+.copy { font-size: 9px; color: rgba(251,249,245,.25); font-weight: 300; }
+.legal { display: flex; gap: 24px; }
+.legalLink { font-size: 9px; color: rgba(251,249,245,.25); font-weight: 300; transition: color .3s; }
+.legalLink:hover { color: #fff; }

@@ -1,0 +1,31 @@
+.section { background: var(--cream); padding: clamp(90px,12vw,180px) 0; }
+.container { max-width: var(--container); margin: 0 auto; padding: 0 var(--gutter); }
+
+.head { max-width: 640px; margin-bottom: 80px; }
+.kicker { font-size: 10px; letter-spacing: 5px; color: var(--gold); font-weight: 400; margin-bottom: 20px; }
+.title { font-family: var(--font-serif); font-weight: 300; font-size: clamp(40px,6vw,68px); line-height: 1.04; color: var(--noir); margin-bottom: 28px; }
+.title em { font-style: italic; color: var(--plum-mid); }
+.intro { font-size: 15px; line-height: 1.95; color: var(--ink); font-weight: 300; }
+
+.list { border-top: 1px solid var(--linen); }
+.row { border-bottom: 1px solid var(--linen); display: grid; grid-template-columns: 130px 1fr 1fr; }
+@media (max-width: 860px) { .row { grid-template-columns: 1fr; } }
+
+.num { padding: 48px; display: flex; align-items: center; border-right: 1px solid var(--linen); }
+@media (max-width: 860px) { .num { padding: 32px 32px 0; border-right: none; align-items: flex-start; } }
+.numText { font-family: var(--font-serif); font-weight: 300; font-size: 60px; color: var(--cream-deep); transition: color .4s; }
+.row:hover .numText { color: var(--gold-light); }
+
+.body { padding: 48px; border-right: 1px solid var(--linen); }
+@media (max-width: 860px) { .body { padding: 16px 32px 32px; border-right: none; } }
+.sub { font-size: 8px; letter-spacing: 2px; color: var(--gold); font-weight: 400; margin-bottom: 12px; }
+.rtitle { font-family: var(--font-serif); font-weight: 300; font-size: 30px; color: var(--noir); margin-bottom: 16px; }
+.desc { font-size: 13px; line-height: 1.95; color: var(--stone); font-weight: 300; margin-bottom: 24px; }
+.duration { display: inline-flex; align-items: center; gap: 8px; font-size: 9px; letter-spacing: 2px; color: var(--stone); padding: 8px 16px; border: 1px solid var(--linen); }
+
+.steps { padding: 48px; }
+@media (max-width: 860px) { .steps { padding: 0 32px 32px; } }
+.stepsLabel { font-size: 8px; letter-spacing: 2px; color: var(--gold); font-weight: 400; margin-bottom: 24px; }
+.stepItem { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 16px; }
+.stepNum { font-family: var(--font-serif); font-style: italic; font-size: 16px; color: var(--gold); flex-shrink: 0; }
+.stepText { font-size: 12px; line-height: 1.7; color: var(--charcoal); font-weight: 300; }
