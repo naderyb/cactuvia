@@ -20,9 +20,6 @@ export default function Hero() {
 
       <div className={styles.inner}>
         <div className={styles.content}>
-          <p className={styles.eyebrow}>
-            COSMÉTIQUES NATURELS · KABYLIE · ALGÉRIE
-          </p>
           <h1 className={styles.title}>
             La beauté née
             <br />
