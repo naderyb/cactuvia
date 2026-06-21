@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Preloader from "./components/ui/preloader";
 import Navbar from "./components/ui/Navbar";
 import Hero from "./components/sections/Hero";
 import Manifesto from "./components/sections/Manifesto";
@@ -7,21 +9,36 @@ import Rituels from "./components/sections/Rituels";
 import Journal from "./components/sections/Journal";
 import Footer from "./components/sections/Footer";
 
-//this is just a test page to render all the sections in one page for development purposes, it will be removed later
-export const metadata = {
-  title: "CACTUVIA - Soins Naturels · Algérie",
-  description:
-    "Des cosmétiques naturelles façonnées par la terre. Formules à base de gel de cactus et plantes pour révéler la beauté authentique de chaque femme.",
-};
+const Separation = () => (
+  <div style={{ width: "100%", lineHeight: 0 }}>
+    <Image
+      src="/seperation.png"
+      alt=""
+      width={1920}
+      height={120}
+      style={{
+        width: "50%",
+        height: "auto",
+        display: "block",
+        margin: "0 auto",
+      }}
+    />
+  </div>
+);
+
 export default function Home() {
   return (
     <main>
+      <Preloader />
       <Navbar />
       <Hero />
+      <Separation />
       <Manifesto />
+      <Separation />
       <Boutique />
       <Ingredients />
       <Rituels />
+      <Separation />
       <Journal />
       <Footer />
     </main>
