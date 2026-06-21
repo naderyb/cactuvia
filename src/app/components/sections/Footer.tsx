@@ -1,4 +1,5 @@
 import styles from "./Footer.module.css";
+import Image from "next/image";
 
 const columns = {
   BOUTIQUE: [
@@ -25,11 +26,17 @@ export default function Footer() {
       <div className={styles.main}>
         <div className={styles.grid}>
           <div>
-            <span className={styles.brandName}>CACTUVIA</span>
-            <span className={styles.brandSub}>SOINS NATURELS</span>
+            <Image
+              src="/logo.png"
+              alt="Cactuvia"
+              width={230}
+              height={120}
+              style={{marginTop: "-25px"}}
+              className={styles.brandLogo}
+            />
             <p className={styles.brandText}>
-              Des cosmétiques naturelles façonnées par la terre, pour
-              révéler la beauté authentique de chaque femme.
+              Des cosmétiques naturelles façonnées par la terre, pour révéler la
+              beauté authentique de chaque femme.
             </p>
             <div className={styles.socials}>
               {["INSTAGRAM", "TIKTOK", "PINTEREST"].map((s) => (
@@ -56,7 +63,8 @@ export default function Footer() {
       <div className={styles.bottom}>
         <div className={styles.bottomInner}>
           <p className={styles.copy}>
-            © {year} CACTUVIA - Tous droits réservés. Fait avec amour en Algérie.
+            © {year} CACTUVIA - Tous droits réservés. Fait avec amour en
+            Algérie.
           </p>
           <div className={styles.legal}>
             <a href="#" className={styles.legalLink}>

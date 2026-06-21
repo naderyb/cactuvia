@@ -23,7 +23,7 @@ export default function Rituels() {
       <div className={styles.container}>
         <div className={`${styles.head} reveal`}>
           <p className={styles.kicker}>RITUELS ANCESTRAUX</p>
-          <h2 className={styles.title}>Des gestes transmis <em>de mère en fille</em></h2>
+          <h2 className={styles.title}>Un savoir-faire qui traverse <em>les générations</em></h2>
           <p className={styles.intro}>
             Chaque soin Cactuvia s&apos;inscrit dans une tradition de gestes
             simples et efficaces, hérités des femmes kabyles qui connaissaient la

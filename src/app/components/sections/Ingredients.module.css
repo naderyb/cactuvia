@@ -222,7 +222,7 @@
   font-size: 8px;
   letter-spacing: 1px;
   padding: 6px 12px;
-  border: 1px solid rgba(197, 162, 83, 0.3);
+  border: 1px solid #57562C;
   color: var(--gold);
   font-weight: 300;
 }
