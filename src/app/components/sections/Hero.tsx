@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "./Hero.module.css";
+import Image from "next/image";
 
 const values = [
   { num: "01", label: "Pureté & Transparence" },
@@ -15,8 +16,14 @@ export default function Hero() {
       <div className={styles.bg} />
       <div className={styles.grain} />
 
-      {/* big ghost letter, like the reference */}
-      <span className={styles.ghost}>C</span>
+      <Image
+        src="/logo.png"
+        alt="Cactuvia"
+        width={500}
+        height={500}
+        priority
+        className={styles.ghost}
+      />
 
       <div className={styles.inner}>
         <div className={styles.content}>

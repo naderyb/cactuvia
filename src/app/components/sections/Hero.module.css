@@ -27,19 +27,16 @@
   background-size: 200px;
 }
 
-/* large translucent C, like the reference */
 .ghost {
   position: absolute;
   z-index: -1;
-  right: 26%;
+  right: 10%;
   top: 50%;
+  width: 500px;
+  height: auto;
   transform: translateY(-50%);
-  font-family: var(--font-serif);
-  font-weight: 300;
-  font-size: clamp(280px, 34vw, 560px);
-  line-height: 1;
-  color: rgba(255,255,255,.045);
-  pointer-events: none;
+  opacity: 0.1;
+  filter: brightness(1.5);  
   user-select: none;
 }
 @media (max-width: 900px) { .ghost { display: none; } }
