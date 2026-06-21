@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
-import Image from "next/image";
 
 const navLinks = [
   { label: "BOUTIQUE", href: "#boutique" },
@@ -27,24 +26,6 @@ export default function Navbar() {
     <>
       <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
         <div className={styles.inner}>
-          <a href="#hero" className={styles.logo}>
-            <Image
-              src="/logo.png"
-              alt="Cactuvia"
-              width={180}
-              height={108}
-              priority
-              className={`${styles.logoImg} ${styles.logoDefault}`}
-            />
-            <Image
-              src="/logo2.png"
-              alt="Cactuvia"
-              width={180}
-              height={108}
-              priority
-              className={`${styles.logoImg} ${styles.logoScrolled}`}
-            />
-          </a>
 
           <div className={styles.links}>
             {navLinks.map((l) => (

@@ -18,41 +18,17 @@
 }
 
 .inner {
+  position: relative;
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 var(--gutter);
   height: 80px;
+
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
 }
 
-/* ===== LOGO (deux versions superposées) ===== */
-.logo {
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-.logoImg {
-  width: auto;
-  height: 90px; /* ← règle la taille du logo ici */
-  object-fit: contain;
-  transition: opacity 0.4s ease;
-}
-.logoScrolled {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-}
-/* nav transparente : logo clair visible, logo2 caché */
-.logoDefault {
-  opacity: 1;
-}
-.logoScrolled {
-  opacity: 0;
-}
 /* nav blanche (scrolled) : on inverse */
 .scrolled .logoDefault {
   opacity: 0;
@@ -62,10 +38,12 @@
 }
 
 .links {
+  justify-self: center;
   display: flex;
   align-items: center;
   gap: 40px;
 }
+
 @media (max-width: 860px) {
   .links,
   .icons {
@@ -102,6 +80,8 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  position: absolute;
+  right: var(--gutter);
 }
 .iconBtn {
   color: rgba(251, 249, 245, 0.85);
