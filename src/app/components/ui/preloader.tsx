@@ -9,7 +9,7 @@ export default function Preloader() {
   const [done, setDone] = useState(false);
 
   useEffect(() => {
-    const DURATION = 5000; // 3.5s — mets entre 3000 et 5000
+    const DURATION = 5000; // 3.5s - mets entre 3000 et 5000
     const start = performance.now();
 
     let raf = 0;

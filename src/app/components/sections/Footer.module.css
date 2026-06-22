@@ -1,11 +1,13 @@
 .footer {
   background: var(--terre-deep);
 }
+
 .main {
   max-width: var(--container);
   margin: 0 auto;
   padding: 96px var(--gutter);
 }
+
 .grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
@@ -18,6 +20,7 @@
     gap: 40px;
   }
 }
+
 @media (max-width: 520px) {
   .grid {
     grid-template-columns: 1fr;
@@ -32,6 +35,7 @@
   color: var(--cream);
   display: block;
 }
+
 .brandSub {
   font-size: 9px;
   letter-spacing: 4px;
@@ -40,6 +44,7 @@
   margin-top: 4px;
   display: block;
 }
+
 .brandText {
   font-size: 12px;
   line-height: 1.95;
@@ -48,10 +53,12 @@
   max-width: 280px;
   margin: 32px 0;
 }
+
 .socials {
   display: flex;
   gap: 20px;
 }
+
 .social {
   font-size: 8px;
   letter-spacing: 2px;
@@ -59,6 +66,7 @@
   font-weight: 300;
   transition: color 0.3s;
 }
+
 .social:hover {
   color: #fff;
 }
@@ -70,24 +78,31 @@
   font-weight: 500;
   margin-bottom: 32px;
 }
+
 .colList {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
+
 .colLink {
   font-size: 12px;
   color: rgba(251, 249, 245, 0.4);
   font-weight: 300;
   transition: color 0.3s;
 }
+
 .colLink:hover {
   color: #fff;
 }
 
 .bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .bottomInner {
   max-width: var(--container);
   margin: 0 auto;
@@ -107,12 +122,14 @@
   display: flex;
   gap: 24px;
 }
+
 .legalLink {
   font-size: 9px;
   color: rgba(251, 249, 245, 0.25);
   font-weight: 300;
   transition: color 0.3s;
 }
+
 .legalLink:hover {
   color: #fff;
 }

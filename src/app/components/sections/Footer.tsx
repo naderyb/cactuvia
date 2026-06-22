@@ -60,20 +60,11 @@ export default function Footer() {
           ))}
         </div>
       </div>
-      <div className={styles.bottom}>
+      <div  className={styles.bottom}>
         <div className={styles.bottomInner}>
           <p className={styles.copy}>
-            © {year} CACTUVIA - Tous droits réservés. Fait avec amour en
-            Algérie.
+            © {year} CACTUVIA - Tous droits réservés.
           </p>
-          <div className={styles.legal}>
-            <a href="#" className={styles.legalLink}>
-              POLITIQUE DE CONFIDENTIALITÉ
-            </a>
-            <a href="#" className={styles.legalLink}>
-              CGV
-            </a>
-          </div>
         </div>
       </div>
     </footer>

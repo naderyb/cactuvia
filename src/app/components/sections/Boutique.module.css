@@ -91,68 +91,52 @@
 .visual {
   position: relative;
   height: 340px;
+  background: var(--plum-pale, #f5eaf0);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .7s cubic-bezier(.22,1,.36,1);
+}
+.card:hover .photo { transform: scale(1.05); }
+
+.noPhoto {
+  font-family: var(--font-serif), serif;
+  font-size: 22px;
+  letter-spacing: 4px;
+  color: var(--plum-light, #c87ba7);
+}
+
 .tag {
   position: absolute;
-  top: 16px;
-  left: 16px;
+  top: 16px; left: 16px;
+  z-index: 2;
   font-size: 8px;
   letter-spacing: 2px;
   padding: 6px 12px;
-  background: var(--gold);
-  color: var(--noir);
+  background: var(--gold, #c9a84b);
+  color: var(--noir, #191410);
   font-weight: 500;
 }
-.tubeWrap {
-  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+
+.stateMsg {
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--stone, #8c8070);
+  font-size: 14px;
+  font-weight: 300;
 }
+
 .card:hover .tubeWrap {
   transform: translateY(-12px);
 }
-.tube {
-  position: relative;
-  width: 74px;
-  height: 196px;
-  border-radius: 37px 37px 8px 8px;
-  background: #fff;
-  box-shadow: 0 12px 30px rgba(28, 23, 18, 0.06);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 14px 8px;
-  overflow: hidden;
-  margin: 0 auto;
-}
-.tubeBand {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 42%;
-}
-.tubeIcon {
-  margin-bottom: 12px;
-  position: relative;
-  z-index: 1;
-}
-.tubeName {
-  font-size: 7px;
-  letter-spacing: 2px;
-  font-weight: 500;
-  position: relative;
-  z-index: 1;
-}
-.cap {
-  width: 60px;
-  height: 16px;
-  border-radius: 0 0 4px 4px;
-  margin: -1px auto 0;
-}
+
 .glow {
   position: absolute;
   inset: 0;
