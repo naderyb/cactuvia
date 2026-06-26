@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
-import { useCart } from "../../context/carContext";
+// import { useCart } from "../../context/carContext";
 
 const navLinks = [
   { label: "BOUTIQUE", href: "#boutique" },
@@ -15,7 +15,7 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const { count, openCart } = useCart();
+  // const { count, openCart } = useCart();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -37,20 +37,7 @@ export default function Navbar() {
           </div>
 
           <div className={styles.icons}>
-            <button className={styles.iconBtn} aria-label="Recherche">
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.2"
-              >
-                <circle cx="11" cy="11" r="7" />
-                <path d="M21 21l-4.35-4.35" strokeLinecap="round" />
-              </svg>
-            </button>
-            <button
+            {/* <button
               className={styles.iconBtn}
               aria-label="Panier"
               onClick={openCart}
@@ -68,7 +55,7 @@ export default function Navbar() {
                 <path d="M16 10a4 4 0 01-8 0" />
               </svg>
               <span className={styles.badge}>{count}</span>
-            </button>
+            </button> */}
           </div>
 
           <button

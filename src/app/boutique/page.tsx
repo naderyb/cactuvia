@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
-import { useCart } from "../context/carContext";
+// import { useCart } from "../context/carContext";
 import Navbar from "../components/ui/Navbar";
 import Footer from "../components/sections/Footer";
 import styles from "./boutique.module.css";
@@ -27,7 +27,7 @@ export default function BoutiquePage() {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("ALL");
   const [sort, setSort] = useState<SortKey>("recent");
-  const { addItem } = useCart();
+  // const { addItem } = useCart();
 
   useEffect(() => {
     (async () => {
@@ -175,7 +175,7 @@ export default function BoutiquePage() {
                     </span>
                     {p.volume && <span className={styles.vol}>{p.volume}</span>}
                   </div>
-                  <button
+                  {/* <button
                     className={styles.add}
                     onClick={() =>
                       addItem({
@@ -188,7 +188,7 @@ export default function BoutiquePage() {
                     }
                   >
                     AJOUTER AU PANIER
-                  </button>
+                  </button> */}
                 </div>
               </article>
             ))}
