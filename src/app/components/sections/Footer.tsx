@@ -1,23 +1,22 @@
 import styles from "./Footer.module.css";
 import Image from "next/image";
 
-const columns = {
-  BOUTIQUE: [
-    "Soins Visage",
-    "Soins Cheveux",
-    "Soins Corps",
-    "Coffrets Cadeaux",
-    "Nouveautés",
-  ],
-  MARQUE: [
-    "Notre Histoire",
-    "Nos Ingrédients",
-    "Nos Rituels",
-    "La Fondatrice",
-    "Philosophie",
-  ],
-  INFORMATIONS: ["Livraison", "Retours", "FAQ", "Contact", "Mentions Légales"],
-};
+// const columns = {
+//   BOUTIQUE: [
+//     "Soins Visage",
+//     "Soins Cheveux",
+//     "Soins Corps",
+//     "Coffrets Cadeaux",
+//     "Nouveautés",
+//   ],
+//   MARQUE: [
+//     "Notre Histoire",
+//     "Nos Ingrédients",
+//     "Nos Rituels",
+//     "La Fondatrice",
+//     "Philosophie",
+//   ],
+// };
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -31,7 +30,7 @@ export default function Footer() {
               alt="Cactuvia"
               width={230}
               height={120}
-              style={{marginTop: "-25px"}}
+              style={{ marginTop: "-25px" }}
               className={styles.brandLogo}
             />
             <p className={styles.brandText}>
@@ -39,14 +38,24 @@ export default function Footer() {
               beauté authentique de chaque femme.
             </p>
             <div className={styles.socials}>
-              {["INSTAGRAM", "TIKTOK", "PINTEREST"].map((s) => (
-                <a key={s} href="#" className={styles.social}>
-                  {s}
+              {["FACEBOOK"].map((f) => (
+                <a key={f} href="#" className={styles.social}>
+                  {f}
+                </a>
+              ))}
+              {["INSTAGRAM"].map((i) => (
+                <a key={i} href="#" className={styles.social}>
+                  {i}
+                </a>
+              ))}
+              {["TIKTOK"].map((t) => (
+                <a key={t} href="#" className={styles.social}>
+                  {t}
                 </a>
               ))}
             </div>
           </div>
-          {Object.entries(columns).map(([title, items]) => (
+          {/* {Object.entries(columns).map(([title, items]) => (
             <div key={title}>
               <p className={styles.colTitle}>{title}</p>
               <div className={styles.colList}>
@@ -57,10 +66,10 @@ export default function Footer() {
                 ))}
               </div>
             </div>
-          ))}
+          ))} */}
         </div>
       </div>
-      <div  className={styles.bottom}>
+      <div className={styles.bottom}>
         <div className={styles.bottomInner}>
           <p className={styles.copy}>
             © {year} CACTUVIA - Tous droits réservés.

@@ -38,11 +38,8 @@ export default function Hero() {
             qui l&apos;a vue grandir.
           </p>
           <div className={styles.actions}>
-            <a href="#boutique" className={styles.btnPrimary}>
-              DÉCOUVRIR LA BOUTIQUE
-            </a>
-            <a href="#rituels" className={styles.btnGhost}>
-              NOS RITUELS
+            <a href="#apropos" className={styles.btnPrimary}>
+              DÉCOUVRIR CACTUVIA
             </a>
           </div>
         </div>

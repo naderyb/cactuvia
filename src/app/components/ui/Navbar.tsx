@@ -5,11 +5,10 @@ import styles from "./Navbar.module.css";
 // import { useCart } from "../../context/carContext";
 
 const navLinks = [
-  { label: "BOUTIQUE", href: "#boutique" },
-  { label: "RITUELS", href: "#rituels" },
-  { label: "INGRÉDIENTS", href: "#ingredients" },
   { label: "À PROPOS", href: "#apropos" },
-  { label: "JOURNAL", href: "#journal" },
+  { label: "INGRÉDIENTS", href: "#ingredients" },
+  { label: "RITUELS", href: "#rituels" },
+  // { label: "BOUTIQUE", href: "#boutique" },
 ];
 
 export default function Navbar() {
